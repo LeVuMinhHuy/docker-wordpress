@@ -24,5 +24,5 @@ RUN rm -r /etc/nginx/conf.d/default.conf
 RUN apt-get install -y php php-cli php-fpm php-json php-pdo php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath php-bz2 php-cgi php-enchant php-gmp php-imap php-intl php-ldap php-pspell php-snmp php-tidy php-xmlrpc php-xsl
 RUN sed -i '/^listen =/c\listen = localhost:9000' /etc/php/7.4/fpm/pool.d/www.conf
 
-CMD service nginx restart
-CMD service php7.4-fpm restart
+# Start nginx and php
+CMD nginx && php-fpm7.4 && /bin/bash
