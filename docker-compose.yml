@@ -1,0 +1,10 @@
+version: '2.2'
+services:
+    web:
+        build: .
+        container_name: group2
+        ports:
+            - 127.0.0.1:1234:80/tcp
+        tty: true
+        volumes:
+            - /wwwroot/wordpress:/var/www/wordpress
