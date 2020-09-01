@@ -2,7 +2,7 @@ version: '2.2'
 services:
     web:
         build: .
-        container_name: test
+        container_name: group2
         ports:
             - 127.0.0.1:2222:80/tcp
         tty: true

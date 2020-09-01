@@ -9,7 +9,6 @@ RUN apt-get update
 RUN apt-get install -y curl gnupg2 ca-certificates lsb-release zip
 
 # Install Nginx
-RUN apt-get install curl gnupg2 ca-certificates lsb-release zip
 RUN echo "deb http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" | tee /etc/apt/sources.list.d/nginx.list
 RUN curl -fsSL https://nginx.org/keys/nginx_signing.key | apt-key add -
 RUN apt-key fingerprint ABF5BD827BD9BF62
